@@ -1,10 +1,7 @@
-from fastapi import APIRouter,Request,UploadFile,File
+from fastapi import APIRouter,UploadFile,File
 from src.pipelines.document_handler import process_document
 from src.pipelines.query_handler import handle_query
-import os
 router=APIRouter()
-# Set up templates
-
 
 @router.post("/upload/")
 async def upload_document(file: UploadFile = File(...)):
