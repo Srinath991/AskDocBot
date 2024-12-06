@@ -1,0 +1,11 @@
+langchain
+langchain_google_genai
+langchain_community
+langchain_pinecone
+fastapi
+uvicorn
+pinecone
+python-multipart
+python-dotenv
+pypdf
+jinja2

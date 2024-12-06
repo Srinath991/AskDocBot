@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A Chatbot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1 class="title">Document-Powered Q&A Chatbot</h1>
+
+        <!-- File Upload Section -->
+        <form id="uploadForm" class="upload-section">
+            <label for="file" class="upload-label">Upload a Document:</label>
+            <input type="file" id="file" name="file" accept=".pdf,.txt" required>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+        
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+            <!-- Chat messages will be appended here -->
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="question" placeholder="Ask me something..." required>
+            <button id="askBtn">Send</button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
