@@ -84,6 +84,6 @@ To deploy the application using Docker:
 3. Access the app: Open http://localhost:8000 in your browser.   
 
 ## 📝 License
-This project is licensed under the SrinathPromax License.
+- This project is licensed under the SrinathPromax License.
 
 Feel free to further customize or add any additional sections as needed!
