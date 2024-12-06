@@ -72,7 +72,7 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
     - Education: Provide personalized answers to students based on educational materials.
 
 ### 🐳 Docker Deployment
-    To deploy the application using Docker:
+To deploy the application using Docker:
 
 1. Build the Docker image:
     ```bash
@@ -81,14 +81,14 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
     ```bash
     docker run -d -p 8000:8000 --env-file .env document-qa  
 
-Access the app: Open http://localhost:8000 in your browser.
+3. Access the app: Open http://localhost:8000 in your browser.
 
 
 
 Contributions are welcome! Please feel free to open issues or submit pull requests.
 
 ## 📝 License
-    This project is licensed under the SrinathPromax License.
+This project is licensed under the SrinathPromax License.
 
 
 Feel free to further customize or add any additional sections as needed!
