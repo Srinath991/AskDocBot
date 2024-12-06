@@ -23,7 +23,7 @@ def handle_query(query,index_name):
         vector_store = get_pinecone_vector_store(index_name, embeddings)
         retriever = vector_store.as_retriever(
             search_type="similarity_score_threshold",
-            search_kwargs={"k": 1, "score_threshold": 0.5},
+            search_kwargs={"k": 5, "score_threshold": 0.5},
         )
         
         def format_docs(docs):

@@ -15,5 +15,6 @@ def get_pinecone_vector_store(index_name:str,embeddings:str,**kwargs):
         return  PineconeVectorStore(index=index, embedding=embeddings,**kwargs)
     except Exception as e:
         raise CustomException(e,sys)
+
     
     

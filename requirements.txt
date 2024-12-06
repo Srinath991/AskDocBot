@@ -7,5 +7,5 @@ uvicorn
 pinecone
 python-multipart
 python-dotenv
-pypdf
+PyPDF
 jinja2
