@@ -81,14 +81,9 @@ To deploy the application using Docker:
     ```bash
     docker run -d -p 8000:8000 --env-file .env document-qa  
 
-3. Access the app: Open http://localhost:8000 in your browser.
-
-
-
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+3. Access the app: Open http://localhost:8000 in your browser.   
 
 ## 📝 License
 This project is licensed under the SrinathPromax License.
-
 
 Feel free to further customize or add any additional sections as needed!
