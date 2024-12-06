@@ -6,7 +6,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch("/upload/", {
+    const response = await fetch("/api/v1/user/upload/", {
         method: "POST",
         body: formData,
     });
@@ -40,7 +40,7 @@ document.getElementById("askBtn").addEventListener("click", async function () {
     loading.style.display = "flex";
 
     try {
-        const response = await fetch(`/query/?question=${encodeURIComponent(question)}`);
+        const response = await fetch(`/api/v1/user/query/?question=${encodeURIComponent(question)}`);
         const result = await response.json();
 
         // Append bot's response
