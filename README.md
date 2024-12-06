@@ -18,22 +18,36 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
 - **Deployment**: Docker, AWS (Cloud deployment)
 - **Others**: Uvicorn, Jinja2 templates for dynamic pages
 
-## 📂 Project Structure
-project/
-├── app/
-│   ├── main.py                 # FastAPI entry point
-│   ├── routes.py               # API routes
-│   ├── static/                 # Static files (CSS, JS)
-│   ├── templates/              # HTML templates
-│   ├── __init__.py
-│   └── dependencies.py         # Dependency management
-├── src/
-│   ├── components/             # Core components for LLMs and embeddings
-│   ├── pipelines/              # Document processing and query handling
-│   ├── exception.py            # Custom exceptions
-│   ├── logger.py               # Logging configuration
-│   └── utils.py                # Utility functions
-├── requirements.txt            # Python dependencies
-├── Dockerfile                  # Docker configuration
-├── README.md                   # Project documentation
-└── .env                        # Environment variables
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10 or higher
+- Docker (for containerized deployment)
+- Pinecone API Key
+- Google Generative AI API Key
+- LangChain API Key
+
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Srinath991/AskDocBot.git
+   cd AskDocBot
+
+2. Set up the environment variables: Create a .env file in the project root with the following content:
+    PINECONE_API_KEY=<your_pinecone_api_key>
+    PINECONE_ENV=<your_pinecone_environment>
+    GOOGLE_API_KEY=<your_google_api_key>
+    LANGCHAIN_API_KEY=<your_langchain_api_key>
+
+3. Install dependencies:
+    ```bash
+   pip install -r requirements.txt
+
+4. Run the FastAPI app:
+    ```bash
+   uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+5. Access the web interface: Open http://localhost:8000 in your browser.
+
