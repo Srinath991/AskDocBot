@@ -1,20 +1,20 @@
-# Use the official Python image as the base image
-FROM python:3.9-slim
+# Use an official Python image as the base
+FROM python:3.10-slim
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+# Copy only the requirements file initially to optimize caching
 COPY requirements.txt .
 
-# Install the dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire application code into the container
+# Copy the rest of the application code
 COPY . .
 
-# Expose the port that the FastAPI app runs on
+# Expose the FastAPI default port
 EXPOSE 8000
 
-# Set the command to run the FastAPI app
+# Command to run the application using Uvicorn
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
