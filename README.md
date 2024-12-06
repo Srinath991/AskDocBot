@@ -8,14 +8,14 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
 - **Real-Time Q&A**: Users can ask questions related to the uploaded documents and receive instant, AI-powered answers.
 - **Google Generative AI**: Utilizes embedding-001 for document embeddings and language understanding.
 - **Pinecone Integration**: Pinecone handles document embeddings and allows efficient similarity search.
-- **Chatbot-style UI**: A modern and interactive user interface for seamless user experience.
+- **UI**: A modern and interactive user interface for seamless user experience.
 - **Containerization**: The project is containerized using Docker for easy deployment.
 
 ## 🛠️ Tech Stack
 - **Backend**: Python, FastAPI, LangChain, Pinecone, Google Generative AI
 - **Frontend**: HTML, CSS, JavaScript (Interactive UI)
 - **Database**: Pinecone (Vector database for search and retrieval)
-- **Deployment**: Docker, AWS (Cloud deployment)
+- **Deployment**: Docker(Cloud deployment)
 - **Others**: Uvicorn, Jinja2 templates for dynamic pages
 
 
