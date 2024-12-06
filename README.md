@@ -36,10 +36,10 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
    cd AskDocBot
 
 2. Set up the environment variables: Create a .env file in the project root with the following content:
-    PINECONE_API_KEY=<your_pinecone_api_key>
-    PINECONE_ENV=<your_pinecone_environment>
-    GOOGLE_API_KEY=<your_google_api_key>
-    LANGCHAIN_API_KEY=<your_langchain_api_key>
+    PINECONE_API_KEY=<your_pinecone_api_key>  
+    PINECONE_ENV=<your_pinecone_environment>  
+    GOOGLE_API_KEY=<your_google_api_key>  
+    LANGCHAIN_API_KEY=<your_langchain_api_key>  
 
 3. Install dependencies:
     ```bash
@@ -53,30 +53,29 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
 
 
 🔍 How the System Works
-Document Upload:
-The user uploads a document via the web interface (PDF or TXT format).
-The document is processed, and embeddings are created using Google Generative AI.
+1. Document Upload:
+    The user uploads a document via the web interface (PDF or TXT format).  
+    The document is processed, and embeddings are created using Google Generative AI.  
 
-Document Storage:
-Embeddings are stored in Pinecone, which enables fast similarity search.
+2. Document Storage:
+    Embeddings are stored in Pinecone, which enables fast similarity search.
 
-User Query:
-The user asks a question related to the document.
+3. User Query:
+    The user asks a question related to the document.  
+    The system retrieves relevant content from Pinecone and generates an answer using Google Generative AI.  
 
-The system retrieves relevant content from Pinecone and generates an answer using Google Generative AI.
+4. 📚 Use Cases
+    Legal: Automate document review and question answering for contracts, laws, etc.
 
-📚 Use Cases
-Legal: Automate document review and question answering for contracts, laws, etc.
+    Healthcare: Answer patient queries based on medical reports or research papers.
 
-Healthcare: Answer patient queries based on medical reports or research papers.
-
-Education: Provide personalized answers to students based on educational materials.
+    Education: Provide personalized answers to students based on educational materials.
 
 
 Contributions are welcome! Please feel free to open issues or submit pull requests.
 
 📝 License
-This project is licensed under the SrinathPromax License.
+    This project is licensed under the SrinathPromax License.
 
 
 Feel free to further customize or add any additional sections as needed!
