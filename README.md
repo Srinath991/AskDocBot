@@ -51,3 +51,32 @@ The Document Q&A System enables users to upload documents (PDF or text), ask que
 
 5. Access the web interface: Open http://localhost:8000 in your browser.
 
+
+🔍 How the System Works
+Document Upload:
+The user uploads a document via the web interface (PDF or TXT format).
+The document is processed, and embeddings are created using Google Generative AI.
+
+Document Storage:
+Embeddings are stored in Pinecone, which enables fast similarity search.
+
+User Query:
+The user asks a question related to the document.
+
+The system retrieves relevant content from Pinecone and generates an answer using Google Generative AI.
+
+📚 Use Cases
+Legal: Automate document review and question answering for contracts, laws, etc.
+
+Healthcare: Answer patient queries based on medical reports or research papers.
+
+Education: Provide personalized answers to students based on educational materials.
+
+
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+📝 License
+This project is licensed under the SrinathPromax License.
+
+
+Feel free to further customize or add any additional sections as needed!
