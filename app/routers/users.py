@@ -6,14 +6,18 @@ router=APIRouter()
 
 @router.post("/upload/")
 async def upload_document(file: UploadFile = File(...)):
-    """Handle document uploads."""
+    """
+    Handle document uploads.
+    """
     content=await file.read()
-    response = process_document(content, index_name='demo')
-    return {"message": "Document uploaded and processed", "details": response}
+    process_document(content, index_name='demo')
+    return {"message": "Document uploaded and processed"}
 
 
 @router.get("/query/")
 async def query(question: str):
-    """Handle queries to the Q&A system."""
+    """
+    Handle queries to the Q&A system.
+    """
     answer = handle_query(question,index_name='demo')
     return {"question": question, "answer": answer}

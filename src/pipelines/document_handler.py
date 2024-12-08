@@ -12,7 +12,6 @@ def process_document(content,index_name,**kwargs):
             tmpfile_path = tmpfile.name 
         loader=PyPDFLoader(tmpfile_path)
         pages = []
-        print(pages)
         for page in loader.lazy_load():
                 pages.append(page)
         docs=chunk_data(pages,chunk_size=1000,chunk_overlap=200)

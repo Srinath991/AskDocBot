@@ -5,14 +5,19 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 
     const formData = new FormData();
     formData.append("file", file);
-
-    const response = await fetch("/api/v1/user/upload/", {
-        method: "POST",
-        body: formData,
-    });
-
-    const result = await response.json();
-    alert(result.message);
+    try{
+        console.log('lkjhgffghjkc')
+        const response = await fetch("/api/v1/user/upload/", {
+            method: "POST",
+            body: formData,
+        });
+        const result = await response.json();
+        console.log('lkjhgjhg')
+        
+    }catch{
+        console.log('Failed to upload')
+        alert('Failed to upload')
+    }
 });
 
 document.getElementById("askBtn").addEventListener("click", async function () {
