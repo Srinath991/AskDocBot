@@ -1,6 +1,7 @@
 from fastapi import APIRouter,UploadFile,File
 from src.pipelines.document_handler import process_document
 from src.pipelines.query_handler import handle_query
+
 router=APIRouter()
 
 @router.post("/upload/")

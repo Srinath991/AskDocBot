@@ -15,5 +15,7 @@ app.include_router(users.router,prefix='/api/v1/user')
 
 @app.get("/")
 async def home(request: Request):
-    """Render the homepage."""
+    """
+    Render the homepage.
+    """
     return templates.TemplateResponse("index.html", {"request": request})
