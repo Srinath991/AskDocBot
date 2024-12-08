@@ -16,6 +16,19 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 });
 
 document.getElementById("askBtn").addEventListener("click", async function () {
+    getData()
+});
+
+document.getElementById("question").addEventListener("keydown",  async function(event) {
+    if (event.key === "Enter") {
+        // Prevent the default behavior if needed (e.g., if it's inside a form)
+        event.preventDefault();
+        getData()
+        
+    }
+});
+
+async function getData(){
     const questionInput = document.getElementById("question");
     const question = questionInput.value.trim();
     const chatWindow = document.getElementById("chatWindow");
@@ -38,20 +51,19 @@ document.getElementById("askBtn").addEventListener("click", async function () {
 
     // Show loading dots
     loading.style.display = "flex";
-
-    try {
-        const response = await fetch(`/api/v1/user/query/?question=${encodeURIComponent(question)}`);
-        const result = await response.json();
-
-        // Append bot's response
-        const botMessage = document.createElement("div");
-        botMessage.className = "chat-bubble bot-message";
-        botMessage.textContent = result.answer || "Sorry, I couldn't find an answer.";
-        chatWindow.appendChild(botMessage);
-    } catch (error) {
-        alert("An error occurred. Please try again.");
-    } finally {
-        loading.style.display = "none";
-        chatWindow.scrollTop = chatWindow.scrollHeight;
-    }
-});
+        try {
+            const response = await fetch(`/api/v1/user/query/?question=${encodeURIComponent(question)}`);
+            const result = await response.json();
+    
+            // Append bot's response
+            const botMessage = document.createElement("div");
+            botMessage.className = "chat-bubble bot-message";
+            botMessage.textContent = result.answer || "Sorry, I couldn't find an answer.";
+            chatWindow.appendChild(botMessage);
+        } catch (error) {
+            alert("An error occurred. Please try again.");
+        } finally {
+            loading.style.display = "none";
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+}
